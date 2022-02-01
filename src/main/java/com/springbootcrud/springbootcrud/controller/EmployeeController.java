@@ -1,5 +1,7 @@
 package com.springbootcrud.springbootcrud.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.springbootcrud.springbootcrud.model.Component;
 import com.springbootcrud.springbootcrud.model.Employee;
 import com.springbootcrud.springbootcrud.service.EmployeeService;
 import org.springframework.http.HttpStatus;
@@ -50,4 +52,30 @@ public class EmployeeController {
 
         return new ResponseEntity<String>("Employee deleted",HttpStatus.OK);
     }
+
+    @GetMapping("/bug")
+    public String getBugs() throws JsonProcessingException {
+        return employeeService.getBugs();
+    }
+
+    @GetMapping("/vulnerability")
+    public String getVulnerability() throws JsonProcessingException {
+        return employeeService.getVulnerability();
+    }
+
+    @GetMapping("/codesmell")
+    public String getCodeSmell() throws JsonProcessingException {
+        return employeeService.getCodeSmells();
+    }
+
+    @GetMapping("/duplication")
+    public String getDuplications() throws JsonProcessingException{
+        return employeeService.getDuplications();
+    }
+
+    @GetMapping("/coverage")
+    public String getCoverage() throws JsonProcessingException{
+        return employeeService.getCoverage();
+    }
+
 }
