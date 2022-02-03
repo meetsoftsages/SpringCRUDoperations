@@ -1,4 +1,4 @@
-package com.springbootcrud.springbootcrud.model;
+package com.springbootcrud.springbootcrud.model.quality;
 
 public class Root {
     private Component component;

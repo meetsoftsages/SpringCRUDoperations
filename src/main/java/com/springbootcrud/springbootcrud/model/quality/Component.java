@@ -1,9 +1,6 @@
-package com.springbootcrud.springbootcrud.model;
+package com.springbootcrud.springbootcrud.model.quality;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class Component {
     private String key;
